@@ -4,9 +4,10 @@ const mongoose = require('mongoose')
 const path = require('path')
 const exphbs = require('express-handlebars')
 const Handlebars = require('handlebars')
-const { allowInsecurePrototypeAccess } = require('@handlebars/allow-prototype-access')
+const {allowInsecurePrototypeAccess} = require("@handlebars/allow-prototype-access");
 
 const todoRoutes = require('./routes/todos')
+
 
 const PORT = process.env.PORT || 3000
 
@@ -43,5 +44,6 @@ async function start() {
 const dbConnection = mongoose.connection;
 dbConnection.on('error', err => console.log(`Connection error: ${err}`));
 dbConnection.once('open', () => console.log('Connected to DB!'));
+
 
 start()

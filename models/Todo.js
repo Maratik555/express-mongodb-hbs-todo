@@ -8,6 +8,15 @@ const schema = new Schema({
   completed: {
     type: Boolean,
     default: false
+  },
+  date: {
+    type: String,
+    default: new Date().toLocaleString("ru", {year: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      timezone: 'UTC'}).slice(0, -2)
   }
 })
 

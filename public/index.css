@@ -1,5 +1,9 @@
 .todo {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.b {
+  margin-top: 1rem;
 }
 
 .todo span.completed {

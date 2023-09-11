@@ -4,7 +4,7 @@
 <ul>
   {{#each todos}}
   <li class="todo">
-    <form action="/complete" method="POST">
+    <form method="post" action="/complete" >
       <label>
         {{#if completed}}
         <input type="checkbox" checked name="completed">
@@ -15,9 +15,9 @@
         {{/if}}
 
         <input type="hidden" value="{{_id}}" name="id">
-
         <button class="btn btn-small" type="submit">Save</button>
       </label>
+        <b class="b">{{date}}</b>
     </form>
   </li>
   {{/each}}
